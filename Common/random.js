@@ -1,6 +1,6 @@
 /**
  * @file 随机数通用文件
- * @author liyuqiang
+ * @author leeqqiang
  */
 
 const getRandomNum = num => {

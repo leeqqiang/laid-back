@@ -1,5 +1,5 @@
 /**
- * @file 查找数据组内K大的元素
+ * @file 查找数组内第K大的元素
  * @author leeqqiang
  */
 

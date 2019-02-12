@@ -1,6 +1,6 @@
 /**
  * @file 冒泡排序
- * @author liyuqiang
+ * @author leeqqiang
  */
 
 const {

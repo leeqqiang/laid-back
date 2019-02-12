@@ -1,6 +1,6 @@
 /**
  * @file 归并排序
- * @author liyuqiang
+ * @author leeqqiang
  */
 
 const {
