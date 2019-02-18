@@ -8,7 +8,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceFolder}/Search/bsearch.js"
+            "program": "${workspaceFolder}/Recursion/pow.js"
         }
     ]
 }
