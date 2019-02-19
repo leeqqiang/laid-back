@@ -4,20 +4,27 @@
  */
 
  /**
-  * 求 x 的 y 次幂
+  * 求 x 的 n 次幂
   * @param {Number} x 底数
-  * @param {Number} y 幂数
+  * @param {Number} n 幂数
   */
-function pow(x, y) {
-  if(y === 0) return 1
+function pow(x, n) {
+  if(n === 0) return 1
   if(x === 0) return 0
-  if(y === 1) return x
+  if(n === 1) return x
 
-  if(y < 0) {
-    return 1 / pow(x, -y)
+  if(n < 0) {
+    return 1 / pow(x, -n)
   }
 
-  return x * pow(x, y - 1)
+  if(n % 2 === 1) {
+    return pow(x, n - 1) * x
+  }
+  else {
+    let tmp = pow(x, n / 2)
+
+    return tmp * tmp
+  }
 }
 
 let y = pow(2, 3)
