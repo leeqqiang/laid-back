@@ -12,22 +12,25 @@ function sqrt(x) {
 
   let low = 1
   let high = x
+  let res
 
   while(low <= high) {
     let mid = Math.floor(low + (high - low) / 2)
-    let product = mid * mid
-    let productPlus = (mid + 1) * (mid + 1)
+    let mid2 = x / mid
 
-    if(product <= x && productPlus > x) {
+    if(mid2 === mid) {
       return mid
     }
-    else if(product < x) {
-      low = mid + 1
-    }
-    else {
+    else if(mid2 < mid) {
       high = mid - 1
     }
+    else {
+      res = mid
+      low = mid + 1
+    }
   }
+
+  return res
 }
 
 /**
@@ -35,20 +38,36 @@ function sqrt(x) {
  * @param {Number} x 开方数
  * @param {*} num 小数位数
  */
-function sqrtDecimal(x, num) {
+function sqrtDecimal(x) {
   if(x === 0) return 0
 
-  // 整数
-  let integer = sqrt(x)
+  let low = 1
+  let high = x
+  let res
 
-  if(integer * integer === x) {
-    return integer
+  while(high - low > 1e-6) {
+    let mid = low + (high - low) / 2
+    let mid2  = x / mid
+
+    if(mid2 === mid) {
+      return mid
+    }
+    else if(mid2 < mid) {
+      high = mid
+    }
+    else {
+      res = mid
+      low = mid
+    }
   }
 
+  res = Math.round(res * 1e6) / 1e6
+
+  return res
 }
 
  let y = sqrt(19)
- let z = sqrtDecimal(8, 6)
+ let z = sqrtDecimal(2)
 
  console.log('sqrt: ', y)
  console.log('sqrt: ', z)
