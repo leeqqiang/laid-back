@@ -8,7 +8,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceFolder}/Tree/dfs.js"
+            "program": "${workspaceFolder}/DP/max-product-subarray.js"
         }
     ]
 }
