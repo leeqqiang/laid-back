@@ -8,7 +8,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceFolder}/DP/max-product-subarray.js"
+            "program": "${workspaceFolder}/DP/coin-change.js"
         }
     ]
 }
